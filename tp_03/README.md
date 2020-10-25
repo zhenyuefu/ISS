@@ -112,3 +112,48 @@ mv d pic.jpg
 ```
 On a fini par avoir une photo `pic.jpg`
 ![pic](./exo2/chunks/pic.jpg)
+
+### Exercice 3
+- Q1
+```bash
+#!/bin/bash
+if [ $# != 1 ]; then
+    echo "Il manque un paramètre"
+    echo "Usage : ./$0 <dir_name>"
+    exit 1
+fi
+if [ ! -d "$1" ]; then
+    echo "err:dir not found"
+    exit 1
+fi
+max=0
+lenth=0
+max_name=""
+cd $1
+for file_name in $(ls); do
+    lenth=$(wc -c <$file_name)
+    if [ $(($max)) -le $(($lenth)) ]; then
+        max=$lenth
+        max_name=$file_name
+    fi
+done
+echo $max_name
+```
+- Q3
+```bash
+#!/bin/bash
+if [ ! -d "sélection" ]; then
+    mkdir sélection
+fi
+cd dico
+for i in $(seq 4); do
+    mv $(bash ../biggest.sh ../dico) ../sélection
+done
+```
+- Q4
+```
+28620112@ssh:/users/nfs/Etu2/28620112/LU2IN020/tp_03/exo3$ bash select.sh 
+28620112@ssh:/users/nfs/Etu2/28620112/LU2IN020/tp_03/exo3$ cd sélection
+28620112@ssh:/users/nfs/Etu2/28620112/LU2IN020/tp_03/exo3/sélection$ ls
+bien  parti  pour  valider
+```
