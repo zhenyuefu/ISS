@@ -1,5 +1,5 @@
 # ISS - Initiation aux Systèmes d’exploitation et au Shell
-## TP 03 – Redirection et variables d’environnement [![](https://img.shields.io/badge/ZHENYUE%20FU-28620112-blue.svg?style=social&logo=gmail)](mailto:zhenyue.fu@etu.sorbonne-universite.fr)
+## [TP 03 – Redirection et variables d’environnement](https://github.com/zhenyuefu/ISS/tree/master/tp_03) [![](https://img.shields.io/badge/ZHENYUE%20FU-28620112-blue.svg?style=social&logo=gmail)](mailto:zhenyue.fu@etu.sorbonne-universite.fr)
 
 ### Exercice 1 : Un classique
 - Q1
