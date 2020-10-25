@@ -116,6 +116,10 @@ On a fini par avoir une photo `pic.jpg`
 ### Exercice 3
 - Q1
 ```bash
+wc -c < test
+```
+- Q2
+```bash
 #!/bin/bash
 if [ $# != 1 ]; then
     echo "Il manque un paramètre"
