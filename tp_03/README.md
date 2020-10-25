@@ -1,5 +1,5 @@
-## TP_03 
-[![](https://img.shields.io/badge/ZHENYUE%20FU-28620112-blue.svg?style=social&logo=gmail)](mailto:zhenyue.fu@etu.sorbonne-universite.fr)
+# ISS - Initiation aux Systèmes d’exploitation et au Shell
+## TP 03 – Redirection et variables d’environnement [![](https://img.shields.io/badge/ZHENYUE%20FU-28620112-blue.svg?style=social&logo=gmail)](mailto:zhenyue.fu@etu.sorbonne-universite.fr)
 
 ### Exercice 1 : Un classique
 - Q1
@@ -23,10 +23,9 @@ mm
 - Q4
 ```sh
 #!/bin/bash
-for num in $(seq 1 26)
-do
+for num in $(seq 1 26); do
     echo -n $num:
-    ./cesar $num < fenetre_sur_coquillage/part1
+    ./cesar $num <fenetre_sur_coquillage/part1
 done
 ```
 Les résultats sont les suivants:
@@ -64,9 +63,8 @@ On a trouvé que 16 est la clé que nous recherchons.
 ```sh
 #!/bin/bash
 cd fenetre_sur_coquillage
-for filename in `ls`
-do
-    ../cesar 16 < $filename >> ../news.txt
+for filename in $(ls); do
+    ../cesar 16 <$filename >>../news.txt
 done
 ```
 On a le fichier `news.txt`.
@@ -80,3 +78,37 @@ voir ce mécanisme comme une émulation du
 activé, on a accès à plusieurs distributions
 intégrant Bash.
 
+### Exercice 2 : SplitStrip
+- Q1
+```bash
+#!/bin/bash
+save_dir="chunks"
+if [ ! -d "$save_dir" ]; then
+    mkdir $save_dir
+fi
+cd $save_dir
+for i in {00..99}; do
+    if
+        [ ! -f "data.$i" ]
+    then
+        wget http://julien.sopena.fr/chunks/data.$i
+    fi
+done
+```
+- Q2
+```bash
+cd chunks
+cat data.* > d
+```
+On a obtenu les fichiers `d` après avoir fusionné tous les chunks.
+- Q3
+```
+28620112@ssh:/users/nfs/Etu2/28620112/LU2IN020/tp_03/exo2/chunks$ file d
+d: JPEG image data, Exif standard: [TIFF image data, little-endian, direntries=0], baseline, precision 8, 650x897, frames 3
+```
+J'ai renommé le fichier avec la commande suivante
+```bash
+mv d pic.jpg
+```
+On a fini par avoir une photo `pic.jpg`
+![pic](./exo2/chunks/pic.jpg)
