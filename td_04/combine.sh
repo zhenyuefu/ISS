@@ -7,3 +7,5 @@ echo $tmp
 
 ./numerotation.sh < $1 > $tmp 
 ./majuscule.sh < $tmp
+
+rm -f $tmp
