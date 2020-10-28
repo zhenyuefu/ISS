@@ -2,7 +2,7 @@
 [ $# -ne 1 ] && echo "Il faut un param !" && exit 1
 [ ! -f $1 ] && echo "Il faut un fichier en param !" && exit 1
 
-./numerotation.sh < $1 | ./majuscule.sh
+cat $1 | ./numerotation.sh | ./majuscule.sh
 
 # tmp=$1.tmp
 # echo $tmp
