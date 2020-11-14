@@ -4,3 +4,4 @@
 - [TP 02 – Introduction à la notion de processus](https://github.com/zhenyuefu/ISS/tree/master/tp_02)
 - [TP 03 – Redirection et variables d’environnement](https://github.com/zhenyuefu/ISS/tree/master/tp_03)
 - [TP 04 – Combinaison de commandes avec les tubes](https://github.com/zhenyuefu/ISS/tree/master/tp_04)
+- [TP 05 – Les expressions régulières](https://github.com/zhenyuefu/ISS/tree/master/tp_05)
