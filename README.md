@@ -6,3 +6,4 @@
 - [TP 04 – Combinaison de commandes avec les tubes](https://github.com/zhenyuefu/ISS/tree/master/tp_04)
 - [TP 05 – Les expressions régulières](https://github.com/zhenyuefu/ISS/tree/master/tp_05)
 - [TP 06 – Édition automatisée](https://github.com/zhenyuefu/ISS/tree/master/tp_06)
+- [TP 08 – Parallélisation et synchronisation avec wait](https://github.com/zhenyuefu/ISS/tree/master/tp_08) 
